@@ -1,0 +1,57 @@
+html {
+    font-size: 22px;
+}
+
+header {
+    width: 60%;
+    margin: 1rem auto 1rem auto;
+}
+
+main {
+    width: 60%;
+    margin: auto;
+}
+
+main section {
+    width: 100%;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    margin-top: 6rem;
+    padding: 5rem;
+    text-align: center;
+}
+
+@media (max-width: 1500px) {
+    html {
+        font-size: 20px;
+    }
+
+    header, main {
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    header, main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 786px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 16px;
+    }
+
+    header, main {
+        width: 95%;
+    }
+}

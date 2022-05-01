@@ -1,0 +1,45 @@
+.typing-reveal {
+    overflow: hidden;
+    animation: typing 5s steps(40, end);
+}
+
+.blur-reveal {
+    animation: blur-reveal 1s ease-in-out;
+}
+
+.wipe-reveal {
+    position: relative;
+}
+
+.wipe-reveal::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 500px 500px white;
+    z-index: 1000;
+    animation: wipe-bottom-reveal 1.5s ease-in-out forwards;
+}
+
+@keyframes wipe-bottom-reveal {
+    0% {top: 0%; height: 100%}
+    99% {top: 100%; height: 0%;}
+    100% {box-shadow: none;}
+}
+
+@keyframes blur-reveal {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes typing-reveal {
+    from {width: 0%}
+    to {width: 100%}
+}

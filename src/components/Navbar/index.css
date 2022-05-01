@@ -1,0 +1,107 @@
+.menu.btn {
+    position: relative;
+    display: none;
+    float: right;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    overflow: visible !important;
+}
+
+nav {
+    width: 30%;
+    margin-left: 70%;
+}
+
+header {
+    height: 4rem;
+}
+
+header .logo {
+    float: left;
+    background-color: gray;
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+}
+
+nav a {
+    display: inline-block;
+    width: 32%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+    color: gray;
+}
+
+nav a.current {
+    color: black;
+}
+
+nav hr {
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    margin: 0;
+    width: 0;
+}
+
+nav a:nth-child(1):hover ~ hr, 
+nav a:nth-child(1):visited ~ hr
+{
+    margin-left: 0;
+    width: 32%;
+}
+
+nav a:nth-child(2):hover ~ hr, 
+nav a:nth-child(2):visited ~ hr
+{
+    margin-left: 32%;
+    width: 32%;
+}
+
+nav a:nth-child(3):hover ~ hr,
+nav a:nth-child(3):visited ~ hr
+{
+    margin-left: 64%;
+    width: 32%;
+}
+
+#drop-down {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    padding: 1em 2em;
+    opacity: 1;
+    visibility: visible;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 0.2em;
+    transition: all 0.2s;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+#drop-down.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 1500px) {
+    nav {
+        width: 40%;
+        margin-left: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu.btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+}

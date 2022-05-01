@@ -1,0 +1,27 @@
+section.posts { 
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+section.posts .title {
+    width: 100%;
+}
+
+section.posts .post {
+    width: 30%;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    section.posts .post {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    section.posts .post {
+        width: 100%;
+    }
+}

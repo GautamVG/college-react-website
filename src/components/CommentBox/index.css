@@ -1,0 +1,70 @@
+form {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    /* align-items: center; */
+    gap: 1em;
+    /* margin: auto; */
+    font-size: 1em;
+}
+
+form > div {
+    /* margin-bottom: 0.5em; */
+}
+
+form label {
+    font-size: 0.8em;
+}
+
+form input {
+    font-size: 1em;
+}
+
+form .contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .contact #name, form .contact #email {
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+form .rating label {
+    font-size: 1.2em;
+}
+
+form .feedback #comment {
+    width: 100%;
+}
+
+form .helper-msg {
+    display: none;
+}
+
+form #submit {
+    margin-top: 1rem;
+    width: 25%;
+    background-color: transparent;
+    transition: all 0.2s;
+}
+
+form #submit:hover {
+    background-color: black;
+    color: white;
+}
+
+form .helper-msg {
+    color: red;
+}
+
+@media (max-width: 600px) {
+    form .contact {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    form .contact input {
+        width: 100%;
+    }
+}
